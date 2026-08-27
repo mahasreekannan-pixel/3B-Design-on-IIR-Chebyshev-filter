@@ -10,42 +10,42 @@
 PC installed with SCILAB. 
 
 # PROGRAM: 
-clc ; 
-close ; 
-wp=input('Enter the pass band frequency (Radians )= ' ); 
-ws=input('Enter the stop band frequency (Radians )= ' ); 
-alphap=input( ' Enter the pass band attenuation (dB)=' ); 
-alphas=input( ' Enter the stop band attenuation(dB)=' ); 
-T=input('Enter the Value of sampling Time='); 
-//Pre warping- Bilinear Transformation 
-omegap=(2/T)*tan(wp/2); 
-disp(omegap,'omegap='); 
-omegas=(2/T)*tan(ws/2); 
-disp(omegas,'omegas='); 
-//Order of the filter 
-N=acosh(sqrt(((10^(0.1*alphas))-1)/((10^(0.1*alphap))-1)))/(acosh(omegas/omegap)); 
-disp(N,'N='); 
-N=ceil(N); 
-disp(N,'Round off value of N='); 
-//Cut off frequency 
-omegac=omegap/(((10^(0.1*alphap)) -1)^(1/(2* N))); 
-disp(omegac,'omegac='); 
-Epsilon = sqrt ((10^(0.1*alphap))-1); 
-disp(Epsilon,'Epsilon='); 
-[pols ,gn] = zpch1(N, Epsilon,omegap ); 
-disp(gn,'Gain'); 
-disp(pols,'Poles'); 
-hs=poly(gn,'s','coeff')/real(poly(pols,'s')); 
-disp(hs,'Analog Low pass Chebyshev Filter Transfer function'); 
-z=poly(0,'z');//Defining variable z 
-Hz=horner(hs,(2/ T)*((z -1)/(z+1)))// Bilinear Transformation 
-disp(Hz,'Digital LPF Transfer function H(Z)='); 
-HW=frmag(Hz,512); // Frequency response 
-w=0:%pi/511:%pi ; 
-plot(w/%pi,abs(HW)); 
-xlabel(' Normalized Digital Frequency w'); 
-ylabel('Magnitude '); 
-title(' Frequency Response of Chebyshev IIR LPF'); 
+<br>clc ; 
+<br>close ; 
+<br>wp=input('Enter the pass band frequency (Radians )= ' ); 
+<br>ws=input('Enter the stop band frequency (Radians )= ' ); 
+<br>alphap=input( ' Enter the pass band attenuation (dB)=' ); 
+<br>alphas=input( ' Enter the stop band attenuation(dB)=' ); 
+<br>T=input('Enter the Value of sampling Time='); 
+<br>//Pre warping- Bilinear Transformation 
+<br>omegap=(2/T)*tan(wp/2); 
+<br>disp(omegap,'omegap='); 
+<br>omegas=(2/T)*tan(ws/2); 
+<br>disp(omegas,'omegas='); 
+<br>//Order of the filter 
+<br>N=acosh(sqrt(((10^(0.1*alphas))-1)/((10^(0.1*alphap))-1)))/(acosh(omegas/omegap)); 
+<br>disp(N,'N='); 
+<br>N=ceil(N); 
+<br>disp(N,'Round off value of N='); 
+<br>//Cut off frequency 
+<br>omegac=omegap/(((10^(0.1*alphap)) -1)^(1/(2* N))); 
+<br>disp(omegac,'omegac='); 
+<br>Epsilon = sqrt ((10^(0.1*alphap))-1); 
+<br>disp(Epsilon,'Epsilon='); 
+<br>[pols ,gn] = zpch1(N, Epsilon,omegap ); 
+<br>disp(gn,'Gain'); 
+<br>disp(pols,'Poles'); 
+<br>hs=poly(gn,'s','coeff')/real(poly(pols,'s')); 
+<br>disp(hs,'Analog Low pass Chebyshev Filter Transfer function'); 
+<br>z=poly(0,'z');//Defining variable z 
+<br>Hz=horner(hs,(2/ T)*((z -1)/(z+1)))// Bilinear Transformation 
+<br>disp(Hz,'Digital LPF Transfer function H(Z)='); 
+<br>HW=frmag(Hz,512); // Frequency response 
+<br>w=0:%pi/511:%pi ; 
+<br>plot(w/%pi,abs(HW)); 
+<br>xlabel(' Normalized Digital Frequency w'); 
+<br>ylabel('Magnitude '); 
+<br>title(' Frequency Response of Chebyshev IIR LPF'); 
 
 
 # OUTPUT: 
