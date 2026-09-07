@@ -61,5 +61,7 @@ PC installed with SCILAB.
 
 
 # RESULT: 
+Thus design of Chebyshev Low pass IIR filter waveforms were plotted and output was verified.
+
+<img width="996" height="1600" alt="image" src="https://github.com/user-attachments/assets/2d146d1d-3ab8-4e04-b01e-1d41475cbe98" />
 Thus design of Chebyshev Low pass IIR filter waveforms were plotted and output was
-verified.
