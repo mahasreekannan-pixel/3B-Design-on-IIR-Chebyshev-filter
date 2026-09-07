@@ -47,6 +47,11 @@ PC installed with SCILAB.
 <br>ylabel('Magnitude '); 
 <br>title(' Frequency Response of Chebyshev IIR LPF'); 
 
+# Manual Calculation :
+<img width="956" height="1599" alt="image" src="https://github.com/user-attachments/assets/0ddc317f-ad6d-4ddb-99b6-71e8731d5057" />
+<img width="934" height="1599" alt="image" src="https://github.com/user-attachments/assets/df089763-bac1-4815-b4cf-2682bf8b997c" />
+<img width="996" height="1600" alt="image" src="https://github.com/user-attachments/assets/2d146d1d-3ab8-4e04-b01e-1d41475cbe98" />
+
 
 # OUTPUT: 
 <img width="623" height="230" alt="image" src="https://github.com/user-attachments/assets/d3a51677-6ea2-4af5-8ac7-f1e3c189f50a" />
