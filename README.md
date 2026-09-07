@@ -68,3 +68,4 @@ Thus design of Chebyshev Low pass IIR filter waveforms were plotted and output w
 <img width="623" height="230" alt="image" src="https://github.com/user-attachments/assets/d3a51677-6ea2-4af5-8ac7-f1e3c189f50a" />
 # RESULT: 
 Thus design of Chebyshev Low pass IIR filter waveforms were plotted and output was verified.
+Thus design of Chebyshev Low pass IIR filter waveforms were plotted and output was verified.
